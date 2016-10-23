@@ -2,20 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1c77416-0be1-4747-abcf-1eb311bf7dd1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/github-deploy/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/head-config.common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/html-elements-plugin/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/modules/angular2-hmr-prod.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/protractor.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/spec-bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/webpack.github-deploy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/android-icon-144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/android-icon-192x192.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/android-icon-36x36.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/android-icon-48x48.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/android-icon-72x72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/android-icon-96x96.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-114x114.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-120x120.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-152x152.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-180x180.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-57x57.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-60x60.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-72x72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-76x76.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon-precomposed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/apple-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/favicon-16x16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/favicon-32x32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/favicon-96x96.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/ms-icon-144x144.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/ms-icon-150x150.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/ms-icon-310x310.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/ms-icon-70x70.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/angular-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/angularclass-avatar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/angularclass-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/+detail/detail.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/+detail/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/about/about.component.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/about/about.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/about/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.e2e.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.resolver.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/app.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/environment.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/home.component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/home.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/home.component.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/home.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/home.e2e.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/title/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/title/title.service.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/title/title.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/x-large/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/x-large/x-large.directive.spec.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home/x-large/x-large.directive.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/no-content/index.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/no-content/no-content.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/css/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/humans.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/icon/browserconfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/mock-data/mock-data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/service-worker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/custom-typings.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main.browser.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/meta/humans.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/meta/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/polyfills.browser.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor.browser.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config/karma-test-shim.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/app.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/styles.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/polyfills.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/vendor.ts" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/helpers.js" afterPath="$PROJECT_DIR$/config/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/karma.conf.js" afterPath="$PROJECT_DIR$/config/karma.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/webpack.common.js" afterPath="$PROJECT_DIR$/config/webpack.common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/webpack.dev.js" afterPath="$PROJECT_DIR$/config/webpack.dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/webpack.prod.js" afterPath="$PROJECT_DIR$/config/webpack.prod.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/webpack.test.js" afterPath="$PROJECT_DIR$/config/webpack.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" afterPath="$PROJECT_DIR$/src/app/app.component.spec.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
     </list>
     <ignored path="pata.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,16 +104,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="polyfills.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/polyfills.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/electron/main.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,6 +132,16 @@
               <folding>
                 <marker date="1477155443000" expanded="true" signature="2011:2016" ph="{&quot;@angular/http&quot;: &quot;2.0.0-rc.3&quot;...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/home/title/index.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,6 +246,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="title" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,12 +490,12 @@
       <workItem from="1476971257836" duration="120000" />
       <workItem from="1476971401902" duration="697000" />
       <workItem from="1477097320043" duration="5138000" />
-      <workItem from="1477189308919" duration="687000" />
+      <workItem from="1477189308919" duration="753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7556000" />
+    <option name="totallyTimeSpent" value="7622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -554,6 +700,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config/modules/angular2-hmr-prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/home/title/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
