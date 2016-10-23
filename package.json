@@ -15,6 +15,9 @@
     "build:docker": "npm run build:prod && docker build -t angular2-webpack-start:latest .",
     "build:prod": "webpack --config config/webpack.prod.js  --progress --profile --bail",
     "build": "npm run build:dev",
+    "prepare": "cp -a electron/. dist",
+    "electron": "npm run prepare && electron dist",
+    "package": "npm run build && npm run prepare && ./node_modules/electron-packager/cli.js dist App --platform=darwin --arch=all --out=app --overwrite",
     "ci": "npm run lint && npm test && npm run e2e",
     "clean:dist": "npm run rimraf -- dist",
     "clean:install": "npm set progress=false && npm install",
@@ -128,7 +131,9 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^2.1.0-beta.9",
     "webpack-md5-hash": "^0.0.5",
-    "webpack-merge": "^0.15.0"
+    "webpack-merge": "^0.15.0",
+    "electron": "^1.4.1",
+    "electron-packager": "^8.1.0"
   },
   "repository": {
     "type": "git",
