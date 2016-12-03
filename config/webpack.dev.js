@@ -23,6 +23,7 @@ const HMR = helpers.hasProcessFlag('hot');
 const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
   host: HOST,
   port: PORT,
+  port: PORT,
   ENV: ENV,
   HMR: HMR
 });

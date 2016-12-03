@@ -1,35 +1,51 @@
 /*
  * Angular 2 decorators and services
  */
-import { Component, ViewEncapsulation } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
-import { AppState } from './app.service';
+import {AppState} from './app.service';
+
+@Component({
+    selector: 'home',
+    template: `
+    <p>Welcome to the development demos for Angular Material 2!</p>
+    <p>Open the sidenav to select a demo. </p>
+  `
+})
+export class HomeComponent {}
 
 /*
  * App Component
  * Top Level Component
  */
 @Component({
-  selector: 'app',
-  encapsulation: ViewEncapsulation.None,
-  styleUrls: [
-    './app.component.css'
-  ],
-  templateUrl: './app.html'
+    moduleId: module.id,
+    selector: 'app',
+    encapsulation: ViewEncapsulation.None,
+    styleUrls: [
+        './app.component.css'
+    ],
+    templateUrl: './app.html',
+    encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
+    angularclassLogo = 'assets/img/angularclass-avatar.png';
+    name = 'Angular 2 Webpack Starter';
+    url = 'https://twitter.com/AngularClass';
 
-  constructor(
-    public appState: AppState) {
+    navItems = [
+        {name: 'Input', route: 'input'},
+        {name: 'List', route: 'list'},
+        {name: 'Menu', route: 'menu'}
+    ];
 
-  }
+    constructor(public appState: AppState) {
 
-  ngOnInit() {
-    console.log('Initial App State', this.appState.state);
-  }
+    }
+
+    ngOnInit() {
+        console.log('Initial App State', this.appState.state);
+    }
 
 }
 
