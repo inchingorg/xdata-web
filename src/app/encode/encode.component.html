@@ -1,0 +1,25 @@
+<md-card class="encode-card encode-basic">
+    <md-toolbar color="primary">Encode</md-toolbar>
+    <md-card-content>
+        <md-input dividerColor="primary" placeholder="Encoding" class="encode-half-width" value="UTF-8"
+                  [(ngModel)]="encoding"></md-input>
+        <md-input dividerColor="accent" placeholder="Format" class="encode-half-width" value="hex|compressed|map"
+                  [(ngModel)]="format"></md-input>
+
+        <h4>Data Source</h4>
+        <p>
+            <md-textarea placeholder="String to be encoded." rows="10" class="encode-full-width"
+                         value="encoding"
+                         #dataSource>
+                <md-hint align="end">{{dataSource.characterCount}} Characters</md-hint>
+            </md-textarea>
+        </p>
+        <h4>Encoded Result</h4>
+        <p>
+            <md-textarea placeholder="Encoded bytes" rows="10" class="encode-full-width"
+                         #encodedBytes>
+                <md-hint align="end">{{encodedBytes.characterCount}} Bytes</md-hint>
+            </md-textarea>
+        </p>
+    </md-card-content>
+</md-card>

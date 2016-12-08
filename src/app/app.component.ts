@@ -2,7 +2,6 @@
  * Angular 2 decorators and services
  */
 import {Component, ViewEncapsulation} from '@angular/core';
-
 import {AppState} from './app.service';
 
 @Component({
@@ -21,9 +20,9 @@ export class HomeComponent {}
 @Component({
     moduleId: module.id,
     selector: 'app',
-    encapsulation: ViewEncapsulation.None,
     styleUrls: [
-        './app.component.css'
+        '../../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css',
+        './app.component.scss'
     ],
     templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None
@@ -35,6 +34,9 @@ export class AppComponent {
 
     navItems = [
         {name: 'Input', route: 'input'},
+        {name: 'Encode', route: 'encode'},
+        {name: 'Decode', route: 'decode'},
+        {name: 'Base64', route: 'base64'},
         {name: 'List', route: 'list'},
         {name: 'Menu', route: 'menu'}
     ];
