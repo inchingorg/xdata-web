@@ -11,7 +11,7 @@ import {removeNgStyles, createNewHosts, createInputTransfer} from '@angularclass
 import {ENV_PROVIDERS} from './environment';
 import {ROUTES} from './app.routes';
 // App is our top level component
-import {AppComponent, HomeComponent} from './app.component';
+import {AppComponent} from './app.component';
 import {APP_RESOLVER_PROVIDERS} from './app.resolver';
 import {AppState, InternalStateType} from './app.service';
 import {NoContentComponent} from './no-content';
@@ -41,7 +41,6 @@ type StoreType = {
     declarations: [
         AppComponent,
         InputDemo,
-        HomeComponent,
         EncodeComponent,
         DecodeComponent,
         Base64Component,
