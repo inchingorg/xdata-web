@@ -1,5 +1,12 @@
 <md-card class="encode-md-card">
-    <md-toolbar color="primary">Encode</md-toolbar>
+    <md-toolbar color="primary">
+        <span>Encode</span>
+        <span class="fill-remaining"></span>
+
+        <button md-icon-button (click)="encode()">
+            <md-icon class="md-24" >radio_button_checked</md-icon>
+        </button>
+    </md-toolbar>
     <md-card-content class="encode-basic-list">
         <md-grid-list cols="2" rowHeight="60" gutterSize="5px">
             <md-grid-tile>
@@ -19,7 +26,7 @@
         <md-textarea
                 rows="4"
                 placeholder="String to be encoded"
-                ([ngModel])="encoding"
+                [(ngModel)]="data"
                 #dataSource>
             <md-hint align="end">{{dataSource.characterCount}} Characters</md-hint>
         </md-textarea>
@@ -27,6 +34,7 @@
         <md-textarea
                 rows="4"
                 placeholder="Encoded bytes"
+                [(ngModel)]="encodedResult"
                 #encodedBytes>
             <md-hint align="end">{{encodedBytes.characterCount}} Bytes</md-hint>
         </md-textarea>
