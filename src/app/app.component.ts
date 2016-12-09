@@ -4,15 +4,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {AppState} from './app.service';
 
-@Component({
-    selector: 'home',
-    template: `
-    <p>Welcome to the development demos for Angular Material 2!</p>
-    <p>Open the sidenav to select a demo. </p>
-  `
-})
-export class HomeComponent {}
-
 /*
  * App Component
  * Top Level Component
@@ -24,14 +15,10 @@ export class HomeComponent {}
         '../../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css',
         './app.component.scss'
     ],
-    templateUrl: './app.html',
+    templateUrl: './app.component.html',
     encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-    angularclassLogo = 'assets/img/angularclass-avatar.png';
-    name = 'Angular 2 Webpack Starter';
-    url = 'https://twitter.com/AngularClass';
-
     navItems = [
         {name: 'Input', route: 'input'},
         {name: 'Encode', route: 'encode'},
