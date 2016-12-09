@@ -1,34 +1,45 @@
-.encode-basic {
-  padding: 0;
-}
 
-.encode-basic md-card-content {
-  padding: 16px;
-}
-
-.encode-full-width {
+.encode-md-card {
   width: 100%;
+  margin-bottom: 100px;
+  padding: 0 0 20px;
+  //background-color: brown;
+
+  md-card-content {
+    padding: 0;
+    //background-color: bisque;
+
+    md-grid-tile {
+      //background-color: bisque;
+    }
+
+    md-textarea {
+      width: 100%;
+      //background-color: brown;
+    }
+
+    h4 {
+      //background-color: aqua;
+    }
+
+    md-input {
+      width: 100%;
+    }
+  }
+
+  .icons {
+    font-size: 100%;
+    height: inherit;
+    vertical-align: top;
+    width: inherit;
+  }
+
+  .textarea {
+    resize: none;
+    border: none;
+    overflow: auto;
+    padding: 0;
+    background: lightblue;
+  }
 }
 
-.encode-half-width {
-  width: 49%;
-}
-
-.encode-icons {
-  font-size: 100%;
-  height: inherit;
-  vertical-align: top;
-  width: inherit;
-}
-
-.encode-card {
-  margin: 16px;
-}
-
-.encode-textarea {
-  resize: none;
-  border: none;
-  overflow: auto;
-  padding: 0;
-  background: lightblue;
-}
