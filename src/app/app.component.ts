@@ -20,12 +20,9 @@ import {AppState} from './app.service';
 })
 export class AppComponent {
     navItems = [
-        {name: 'Input', route: 'input'},
         {name: 'Encode', route: 'encode'},
         {name: 'Decode', route: 'decode'},
-        {name: 'Base64', route: 'base64'},
-        {name: 'List', route: 'list'},
-        {name: 'Menu', route: 'menu'}
+        {name: 'Base64', route: 'base64'}
     ];
 
     constructor(public appState: AppState) {
