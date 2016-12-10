@@ -14,10 +14,12 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { HomeComponent } from './home';
-import { AboutComponent } from './about';
-import { NoContentComponent } from './no-content';
-import { XLarge } from './home/x-large';
+import {NoContentComponent} from './no-content';
+import {MaterialModule} from '@angular/material';
+import {InputDemo} from './input/input-demo'
+import {DecodeComponent} from "./decode/decode.component";
+import {Base64Component} from "./base64/base64.component";
+import {EncodeComponent} from "./encode/encode.component";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -38,16 +40,18 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    AboutComponent,
-    HomeComponent,
-    NoContentComponent,
-    XLarge
+    InputDemo,
+    EncodeComponent,
+    DecodeComponent,
+    Base64Component,
+    NoContentComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    MaterialModule.forRoot()
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
