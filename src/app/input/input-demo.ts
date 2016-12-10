@@ -4,7 +4,6 @@ import {Component} from '@angular/core';
 let max = 5;
 
 @Component({
-  moduleId: module.id,
   selector: 'input-demo',
   templateUrl: 'input-demo.html',
   styleUrls: ['input-demo.scss'],
