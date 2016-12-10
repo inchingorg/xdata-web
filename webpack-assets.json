@@ -1,11 +1,11 @@
 {
   "vendor": {
-    "js": "/xdata-web/vendor.bundle.js"
+    "js": "/git@github.com:inchingorg/xdata-web.git/vendor.f34e622e981de703287e.bundle.js"
   },
   "main": {
-    "js": "/xdata-web/main.bundle.js"
+    "js": "/git@github.com:inchingorg/xdata-web.git/main.7d5362f6ea428a044103.bundle.js"
   },
   "polyfills": {
-    "js": "/xdata-web/polyfills.bundle.js"
+    "js": "/git@github.com:inchingorg/xdata-web.git/polyfills.e6be7a6304564af2ebba.bundle.js"
   }
 }
