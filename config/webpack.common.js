@@ -127,6 +127,10 @@ module.exports = function (options) {
           test: /\.css$/,
           use: ['to-string-loader', 'css-loader']
         },
+        {
+          test: /\.scss$/,
+          use: ['to-string-loader', 'css', 'sass']
+        },
 
         /* Raw loader support for *.html
          * Returns file content as string
