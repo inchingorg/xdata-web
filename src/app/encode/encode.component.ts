@@ -1,6 +1,9 @@
-import { Component} from '@angular/core';
-import { MdSnackBarConfig, MdSnackBar} from "@angular/material";
-const xdata = require('xdata-library');
+import {Component} from '@angular/core';
+import {MdSnackBarConfig, MdSnackBar} from "@angular/material";
+const xdata = require('@inchingorg/xdata');
+const encoder = xdata.encoder;
+const decoder = xdata.decoder;
+const base64 = xdata.base64;
 
 @Component({
   selector: 'xd-encode',
@@ -11,17 +14,49 @@ export class EncodeComponent {
   data: string;
   encoding: string = 'utf-8';
   format: string = 'hex';
-  encodedResult: string = '';
+  result: string = '';
+  isBase64: boolean = false;
+  bytesCount: number = 0;
 
   constructor(public snackBar: MdSnackBar) {
   }
 
-  encode() {
+  isValidata() {
     if (!this.data) {
       let config = new MdSnackBarConfig();
-      this.snackBar.open('Please input the encoding data', '', config);
+      config.duration = 1000;
+      this.snackBar.open('Please input source data.', '', config);
+      return false;
+    }
+
+    return true;
+  }
+
+  encode() {
+    if (!this.isValidata()) {
       return;
     }
-    this.encodedResult = xdata.encode(this.data, this.encoding, this.format);
+
+    if (this.isBase64) {
+      this.result = base64.encode(this.data, this.encoding);
+      return;
+    }
+
+    let buffer = encoder.encode(this.data, this.encoding);
+    this.bytesCount = Buffer.byteLength(buffer, 'hex');
+    this.result = encoder.format(buffer, this.format);
+  }
+
+  decode() {
+    if (!this.isValidata()) {
+      return;
+    }
+
+    if (this.isBase64) {
+      this.result = base64.decode(this.data, this.encoding);
+    } else {
+      this.result = decoder.decode(this.data, this.encoding);
+    }
+
   }
 }

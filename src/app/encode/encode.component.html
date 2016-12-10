@@ -1,43 +1,46 @@
 <md-card class="encode-md-card">
-    <md-toolbar color="primary">
-        <span>Encode</span>
-        <span class="fill-remaining"></span>
+  <md-toolbar color="primary">
+    <section>
+      <button md-raised-button color="accent" (click)="encode()">Encode</button>
+      <button md-raised-button color="accent" (click)="decode()">Decode</button>
+    </section>
+    <span class="fill-remaining"></span>
+      <md-icon class="md-24">live_help</md-icon>
+  </md-toolbar>
+  <md-card-content>
+    <table cellspacing="0" style="width: 100%">
+      <tr>
+        <td>
+          <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
+        </td>
+        <td>
+          <md-input dividerColor="primary" placeholder="UTF-8/GBK/..."
+                    [(ngModel)]="encoding">
+          </md-input>
+        </td>
+        <td [style.visibility]="isBase64? 'hidden':'visible'">
+          <md-input dividerColor="accent" placeholder="hex|compressed|map"
+                    [(ngModel)]="format"></md-input>
+        </td>
 
-        <button md-icon-button (click)="encode()">
-            <md-icon class="md-24" >radio_button_checked</md-icon>
-        </button>
-    </md-toolbar>
-    <md-card-content class="encode-basic-list">
-        <md-grid-list cols="2" rowHeight="60" gutterSize="5px">
-            <md-grid-tile>
-                Encoding:
-                <md-input dividerColor="primary" placeholder="UTF-8/GBK"
-                          [(ngModel)]="encoding">
-                </md-input>
-            </md-grid-tile>
-            <md-grid-tile>
-                <span>Format:</span>
-                <md-input dividerColor="accent" placeholder="hex|compressed|map"
-                          [(ngModel)]="format">
-                </md-input>
-            </md-grid-tile>
-        </md-grid-list>
+      </tr>
+    </table>
 
-        <md-textarea
-                rows="4"
-                placeholder="String to be encoded"
-                [(ngModel)]="data"
-                #dataSource>
-            <md-hint align="end">{{dataSource.characterCount}} Characters</md-hint>
-        </md-textarea>
+    <md-textarea
+      rows="4"
+      placeholder="Data Source"
+      [(ngModel)]="data"
+      #dataSource>
+      <md-hint align="end">{{dataSource.characterCount}} Characters</md-hint>
+    </md-textarea>
 
-        <md-textarea
-                rows="4"
-                placeholder="Encoded bytes"
-                [(ngModel)]="encodedResult"
-                #encodedBytes>
-            <md-hint align="end">{{encodedBytes.characterCount}} Bytes</md-hint>
-        </md-textarea>
+    <md-textarea
+      readonly
+      rows="4"
+      placeholder="Result"
+      [(ngModel)]="result">
+      <md-hint align="end">{{bytesCount}} {{isBase64? 'Characters': 'Bytes'}}</md-hint>
+    </md-textarea>
 
-    </md-card-content>
+  </md-card-content>
 </md-card>

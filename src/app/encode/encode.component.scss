@@ -2,7 +2,7 @@
 .encode-md-card {
   width: 100%;
   margin-bottom: 100px;
-  padding: 0 0 20px;
+  padding: 0;
   //background-color: brown;
   md-toolbar {
     span.fill-remaining {
@@ -11,8 +11,7 @@
   }
 
   md-card-content {
-    padding: 0;
-    //background-color: bisque;
+    padding: 16px;
 
     md-grid-tile {
       //background-color: bisque;
@@ -30,21 +29,22 @@
     md-input {
       width: 100%;
     }
-  }
 
-  .icons {
-    font-size: 100%;
-    height: inherit;
-    vertical-align: top;
-    width: inherit;
-  }
+    form {
+      table {
+        width: 100%;
 
-  .textarea {
-    resize: none;
-    border: none;
-    overflow: auto;
-    padding: 0;
-    background: lightblue;
+        td {
+          md-input {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    md-textarea {
+      width: 100%;
+    }
   }
 }
 
