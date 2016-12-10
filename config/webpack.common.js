@@ -129,7 +129,7 @@ module.exports = function (options) {
         },
         {
           test: /\.scss$/,
-          use: ['to-string-loader', 'css', 'sass']
+          use: ['to-string-loader', 'css-loader', 'sass-loader']
         },
 
         /* Raw loader support for *.html
