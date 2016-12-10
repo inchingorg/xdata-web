@@ -1,37 +1,76 @@
 /*
  * Angular 2 decorators and services
  */
-import {Component, ViewEncapsulation} from '@angular/core';
-import {AppState} from './app.service';
+import { Component, ViewEncapsulation } from '@angular/core';
+
+import { AppState } from './app.service';
 
 /*
  * App Component
  * Top Level Component
  */
 @Component({
-    moduleId: module.id,
-    selector: 'app',
-    styleUrls: [
-        '../../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css',
-        './app.component.scss'
-    ],
-    templateUrl: './app.component.html',
-    encapsulation: ViewEncapsulation.None
+  selector: 'app',
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: [
+    './app.component.css'
+  ],
+  template: `
+    <nav>
+      <span>
+        <a [routerLink]=" ['./'] ">
+          Index
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./home'] ">
+          Home
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./detail'] ">
+          Detail
+        </a>
+      </span>
+      |
+      <span>
+        <a [routerLink]=" ['./about'] ">
+          About
+        </a>
+      </span>
+    </nav>
+
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+
+    <footer>
+      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
+      <div>
+        <a [href]="url">
+          <img [src]="angularclassLogo" width="25%">
+        </a>
+      </div>
+    </footer>
+  `
 })
 export class AppComponent {
-    navItems = [
-        {name: 'Encode', route: 'encode'},
-        {name: 'Decode', route: 'decode'},
-        {name: 'Base64', route: 'base64'}
-    ];
+  angularclassLogo = 'assets/img/angularclass-avatar.png';
+  name = 'Angular 2 Webpack Starter';
+  url = 'https://twitter.com/AngularClass';
 
-    constructor(public appState: AppState) {
+  constructor(
+    public appState: AppState) {
 
-    }
+  }
 
-    ngOnInit() {
-        console.log('Initial App State', this.appState.state);
-    }
+  ngOnInit() {
+    console.log('Initial App State', this.appState.state);
+  }
 
 }
 

@@ -1,16 +1,18 @@
-import {Routes} from '@angular/router';
-import {NoContentComponent} from './no-content';
-import {InputDemo} from './input/input-demo';
-import {EncodeComponent} from "./encode/encode.component";
-import {DecodeComponent} from "./decode/decode.component";
-import {Base64Component} from "./base64/base64.component";
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home';
+import { AboutComponent } from './about';
+import { NoContentComponent } from './no-content';
+
+import { DataResolver } from './app.resolver';
 
 
 export const ROUTES: Routes = [
-    {path: '', component: EncodeComponent},
-    {path: 'input', component: InputDemo},
-    {path: 'encode', component: EncodeComponent},
-    {path: 'decode', component: DecodeComponent},
-    {path: 'base64', component: Base64Component},
-    {path: '**', component: NoContentComponent},
+  { path: '',      component: HomeComponent },
+  { path: 'home',  component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  {
+    path: 'detail', loadChildren: () => System.import('./+detail')
+      .then((comp: any) => comp.default),
+  },
+  { path: '**',    component: NoContentComponent },
 ];
