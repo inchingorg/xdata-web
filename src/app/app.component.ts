@@ -16,8 +16,7 @@ import { AppState } from './app.service';
     '../../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css',
     './app.component.scss'
   ],
-  templateUrl: './app.component.html',
-  encapsulation: ViewEncapsulation.None
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   navItems = [
