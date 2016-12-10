@@ -19,7 +19,7 @@ import {MaterialModule} from '@angular/material';
 import {InputDemo} from './input/input-demo'
 import {DecodeComponent} from "./decode/decode.component";
 import {Base64Component} from "./base64/base64.component";
-import {EncodeComponent} from "./encode/encode.component";
+import {EncodingComponent} from "./encoding/encode.component";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -41,9 +41,7 @@ type StoreType = {
   declarations: [
     AppComponent,
     InputDemo,
-    EncodeComponent,
-    DecodeComponent,
-    Base64Component,
+    EncodingComponent,
     NoContentComponent
   ],
   imports: [ // import Angular's modules

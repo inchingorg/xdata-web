@@ -10,7 +10,7 @@ const base64 = xdata.base64;
   templateUrl: './encode.component.html',
   styleUrls: ['./encode.component.scss']
 })
-export class EncodeComponent {
+export class EncodingComponent {
   data: string;
   encoding: string = 'utf-8';
   format: string = 'hex';

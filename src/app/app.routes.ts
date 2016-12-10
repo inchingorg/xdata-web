@@ -1,16 +1,13 @@
 import {Routes} from '@angular/router';
 import {NoContentComponent} from './no-content';
 import {InputDemo} from './input/input-demo';
-import {EncodeComponent} from "./encode/encode.component";
+import {EncodingComponent} from "./encoding/encode.component";
 import {DecodeComponent} from "./decode/decode.component";
 import {Base64Component} from "./base64/base64.component";
 
 
 export const ROUTES: Routes = [
-  {path: '', component: EncodeComponent},
-  {path: 'input', component: InputDemo},
-  {path: 'encode', component: EncodeComponent},
-  {path: 'decode', component: DecodeComponent},
-  {path: 'base64', component: Base64Component},
+  {path: '', component: EncodingComponent},
+  {path: 'encoding', component: EncodingComponent},
   {path: '**', component: NoContentComponent},
 ];
