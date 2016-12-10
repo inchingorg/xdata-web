@@ -3,8 +3,6 @@
  */
 import { Component, ViewEncapsulation } from '@angular/core';
 
-import { AppState } from './app.service';
-
 /*
  * App Component
  * Top Level Component
@@ -22,6 +20,7 @@ export class AppComponent {
   navItems = [
     {name: 'Encoding', route: 'encoding'}
   ];
+  version = require('../../package.json').version;
 
   constructor() {
 
