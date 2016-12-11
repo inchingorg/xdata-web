@@ -2,9 +2,9 @@
 
 xdata is a opensource utility used to encode, decode, encrypt. xdata can run on website, desktop, command line tools.
 
-- [xdata-web](https://github.com/inchingorg/xdata-web)
-- [xdata-cli](https://github.com/inchingorg/xdata-cli)
-- [xdata](https://github.com/inchingorg/xdata)
+- [xdata-web](https://github.com/inchingorg/xdata-web) for webiste.
+- [xdata-cli](https://github.com/inchingorg/xdata-cli) for command line tools.
+- [xdata](https://github.com/inchingorg/xdata) library.
 
 ### Usage
 
