@@ -9,7 +9,7 @@ xdata is a opensource utility used to encode, decode, encrypt. xdata can run on 
 ### Usage
 
 - Online: [XDATA](https://inchingorg.github.io/xdata-web/#/)
-- Download Desktop: 
+- Download Desktop: <https://github.com/inchingorg/xdata-web/releases/>
 
 ## Quick start
 
