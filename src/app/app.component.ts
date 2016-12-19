@@ -18,7 +18,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   navItems = [
-    {name: 'Encoding', route: 'encoding'}
+    {name: 'Encoding', route: 'encoding'},
+    {name: '贝尔宾团队角色', route: 'belbin'}
   ];
   version = require('../../package.json').version;
 
