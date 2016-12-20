@@ -21,7 +21,7 @@ export class EncodingComponent {
   constructor(public snackBar: MdSnackBar) {
   }
 
-  isValidata() {
+  isValid() {
     if (!this.data) {
       let config = new MdSnackBarConfig();
       config.duration = 1000;
@@ -33,7 +33,7 @@ export class EncodingComponent {
   }
 
   encode() {
-    if (!this.isValidata()) {
+    if (!this.isValid()) {
       return;
     }
 
@@ -48,7 +48,7 @@ export class EncodingComponent {
   }
 
   decode() {
-    if (!this.isValidata()) {
+    if (!this.isValid()) {
       return;
     }
 

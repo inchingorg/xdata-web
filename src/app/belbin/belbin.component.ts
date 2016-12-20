@@ -21,7 +21,7 @@ export class BelbinComponent {
   constructor(public snackBar: MdSnackBar) {
   }
 
-  isValidata() {
+  isValid() {
     if (!this.data) {
       let config = new MdSnackBarConfig();
       config.duration = 1000;
@@ -33,7 +33,7 @@ export class BelbinComponent {
   }
 
   encode() {
-    if (!this.isValidata()) {
+    if (!this.isValid()) {
       return;
     }
 
@@ -48,7 +48,7 @@ export class BelbinComponent {
   }
 
   decode() {
-    if (!this.isValidata()) {
+    if (!this.isValid()) {
       return;
     }
 
@@ -57,6 +57,5 @@ export class BelbinComponent {
     } else {
       this.result = decoder.decode(this.data, this.encoding);
     }
-
   }
 }
