@@ -1,50 +1,26 @@
+div.belbin {
+  display: flex;
+  flex-flow: column wrap;
 
-.encode-md-card {
-  width: 100%;
-  margin-bottom: 100px;
-  padding: 0;
-  //background-color: brown;
-  md-toolbar {
-    span.fill-remaining {
-      flex: 1 1 auto;
-    }
+  md-list, md-nav-list {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 20px 20px 0 0;
+    width: 100%;
+  }
+  h2 {
+    margin-top: 20px;
   }
 
-  md-card-content {
-    padding: 16px;
+  md-icon {
+    color: rgba(0, 0, 0, 0.12);
+  }
 
-    md-grid-tile {
-      //background-color: bisque;
-    }
-
-    md-textarea {
-      width: 100%;
-      //background-color: brown;
-    }
-
-    h4 {
-      //background-color: aqua;
-    }
-
-    md-input {
-      width: 100%;
-    }
-
-    form {
-      table {
-        width: 100%;
-
-        td {
-          md-input {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    md-textarea {
-      width: 100%;
-    }
+  [md-list-icon] {
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
   }
 }
 
+.demo-secondary-text {
+  color: rgba(0, 0, 0, 0.54);
+}
