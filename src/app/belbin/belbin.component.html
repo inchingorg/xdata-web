@@ -1,13 +1,18 @@
 <div class="belbin">
   <md-list *ngFor="let choice of questions">
-    <h3 md-subheader>{{choice.number}}. <span>{{choice.question}}</span></h3>
+    <h3>{{choice.number}}. <span>{{choice.question}}</span></h3>
     <md-list-item *ngFor="let option of choice.options">
       <p md-line>
-        <span>{{option.number}}. </span>
-        <span class="demo-secondary-text">{{option.answer}}</span>
-        <md-input placeholder="0-10" type="number" min="0" max="10" maxlength="4" align="end" [(ngModel)]="option.score"></md-input>
+        <span class="secondary-text">{{option.number}}. </span>
+        <span>{{option.answer}}</span>
+        <md-input placeholder="0-10" type="number" min="0" max="10" maxlength="4" align="end"
+                  [(ngModel)]="option.score"></md-input>
       </p>
     </md-list-item>
     <md-divider></md-divider>
   </md-list>
+
+  <section class="centered submit">
+    <button md-raised-button color="accent" (click)="onSubmit()">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
+  </section>
 </div>

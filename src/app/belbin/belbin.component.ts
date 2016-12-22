@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
-import {MdSnackBarConfig, MdSnackBar} from "@angular/material";
 import {ChoiceQuestion, Option} from "./choice-question";
-const xdata = require('@inchingorg/xdata');
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -12,8 +11,13 @@ const xdata = require('@inchingorg/xdata');
 export class BelbinComponent {
   scoreOptions = Array.from(Array(10).keys());
 
-  constructor(public snackBar: MdSnackBar) {
+  constructor(private router: Router) {
   }
+
+  onSubmit(){
+    this.router.navigate(['/belbin-result']);
+  }
+
 
   questions = [new ChoiceQuestion('一', '我认为我能为团队做出贡献是：', [
     new Option('A', '我能很快地发现并把握住新的机遇。'),

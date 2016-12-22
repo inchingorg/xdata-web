@@ -14,3 +14,12 @@ export class Option {
 
   };
 }
+
+export class Role {
+  constructor(public name: string,
+              public typicalCharacter: string,
+              public positiveCharacter,
+              public tolerableWeekness: string,
+              public effectsOnTeams: string[]) {
+  }
+}

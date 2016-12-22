@@ -1,0 +1,35 @@
+.card-container {
+  display: flex;
+  flex-flow: column wrap;
+
+  md-card {
+    margin: 0 16px 16px 0;
+    padding: 10px;
+  }
+
+  img {
+    background-color: gray;
+  }
+
+  .secondary-text {
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  .effectOnTeam {
+    padding-bottom: 20px;
+  }
+
+  .roleeffect {
+    padding: 5px 10px;
+  }
+}
+
+.demo-card-blue {
+  background-color: #b0becc;
+
+  md-card-actions {
+    display: flex;
+    flex-direction: column;
+  }
+
+}

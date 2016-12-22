@@ -1,3 +1,5 @@
+$md-list-side-padding: 16px;
+
 div.belbin {
   display: flex;
   flex-flow: column wrap;
@@ -11,6 +13,18 @@ div.belbin {
     margin-top: 20px;
   }
 
+  .centered {
+    text-align: center;
+  }
+
+  .submit {
+    margin: 40px 0;
+  }
+
+  h3 {
+    padding: 0 $md-list-side-padding;
+  }
+
   md-icon {
     color: rgba(0, 0, 0, 0.12);
   }
@@ -19,8 +33,9 @@ div.belbin {
     color: white;
     background: rgba(0, 0, 0, 0.3);
   }
+
+  .secondary-text {
+    color: rgba(0, 0, 0, 0.54);
+  }
 }
 
-.demo-secondary-text {
-  color: rgba(0, 0, 0, 0.54);
-}

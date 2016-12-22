@@ -1,0 +1,39 @@
+<div class="card-container">
+  <md-card *ngFor="let role of roles">
+    <md-card-subtitle>主要个性</md-card-subtitle>
+    <md-card-title>{{role.name}}</md-card-title>
+    <md-card-content>
+      <md-list>
+        <md-list-item>
+          <p md-line>
+            <span class="secondary-text">典型特征： </span>
+            <span>{{role.typicalCharacter}} </span>
+          </p>
+        </md-list-item>
+        <md-list-item>
+          <p md-line>
+            <span class="secondary-text">积极特性： </span>
+            <span>{{role.positiveCharacter}} </span>
+          </p>
+        </md-list-item>
+        <md-list-item>
+          <p md-line>
+            <span class="secondary-text">能容忍的弱点： </span>
+            <span>{{role.tolerableWeekness}} </span>
+          </p>
+
+        </md-list-item>
+        <md-list-item>
+          <p md-line class="effectOnTeam">
+            <span class="secondary-text">在团队中的作用： </span></p>
+
+          <p md-line class="roleeffect" *ngFor="let effect of role.effectsOnTeams">
+            {{effect}}
+          </p>
+          <!--<span *ngFor="let effect of role.effectsOnTeams">{{effect}} </span>-->
+        </md-list-item>
+      </md-list>
+    </md-card-content>
+  </md-card>
+</div>
+
