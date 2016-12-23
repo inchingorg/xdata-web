@@ -1,9 +1,9 @@
 {
+  "main": {
+    "js": "/xdata-web/main.0e1640268102e2657290.bundle.js"
+  },
   "vendor": {
     "js": "/xdata-web/vendor.f34e622e981de703287e.bundle.js"
-  },
-  "main": {
-    "js": "/xdata-web/main.7d5362f6ea428a044103.bundle.js"
   },
   "polyfills": {
     "js": "/xdata-web/polyfills.e6be7a6304564af2ebba.bundle.js"
