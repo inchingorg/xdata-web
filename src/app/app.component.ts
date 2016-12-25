@@ -11,7 +11,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    '../../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css',
+    '../../node_modules/@angular/material/core/theming/prebuilt/deeppurple-amber.scss',
     './app.component.scss'
   ],
   templateUrl: './app.component.html'

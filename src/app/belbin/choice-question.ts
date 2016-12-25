@@ -16,6 +16,8 @@ export class Option {
 }
 
 export class Role {
+  public score: number = 0;
+
   constructor(public name: string,
               public typicalCharacter: string,
               public positiveCharacter,
