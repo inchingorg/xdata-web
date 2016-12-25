@@ -5,39 +5,43 @@
       <button md-raised-button color="accent" (click)="decode()">Decode</button>
     </section>
     <span class="fill-remaining"></span>
-      <md-icon class="md-24">live_help</md-icon>
+    <md-icon class="md-24">live_help</md-icon>
   </md-toolbar>
   <md-card-content>
-    <table cellspacing="0" style="width: 100%">
-      <tr>
-        <td>
-          <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
-        </td>
-        <td>
-          <md-input dividerColor="primary" placeholder="UTF-8/GBK/..."
-                    [(ngModel)]="encoding">
-          </md-input>
-        </td>
-        <td [style.visibility]="isBase64? 'hidden':'visible'">
-          <md-input dividerColor="accent" placeholder="hex|compressed|map"
-                    [(ngModel)]="format"></md-input>
-        </td>
-
-      </tr>
-    </table>
+    <h3>Data Source</h3>
+    <p md-line>
+      <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
+      <md-input dividerColor="primary" placeholder="UTF-8/GBK/..."
+                [(ngModel)]="encoding">
+      </md-input>
+    </p>
 
     <md-textarea
       rows="4"
-      placeholder="Data Source"
       [(ngModel)]="data"
       #dataSource>
       <md-hint align="end">{{dataSource.characterCount}} Characters</md-hint>
     </md-textarea>
 
+    <h3 md-subheader>Result</h3>
+
+    <section class="radio-container" [style.visibility]="isBase64? 'hidden':'visible'">
+      <md-radio-group name="more_options" [(ngModel)]="format" (change)="encode()">
+        <md-radio-button name="more_options" value="hex">
+          HEX
+        </md-radio-button>
+        <md-radio-button name="more_options" value="compressed">
+          Compressed Hex
+        </md-radio-button>
+        <md-radio-button name="more_options" value="map">
+          HEX Map
+        </md-radio-button>
+      </md-radio-group>
+    </section>
+
     <md-textarea
       readonly
       rows="4"
-      placeholder="Result"
       [(ngModel)]="result">
       <md-hint align="end">{{bytesCount}} {{isBase64? 'Characters': 'Bytes'}}</md-hint>
     </md-textarea>

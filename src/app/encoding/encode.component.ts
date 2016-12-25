@@ -39,6 +39,7 @@ export class EncodingComponent {
 
     if (this.isBase64) {
       this.result = base64.encode(this.data, this.encoding);
+      this.bytesCount = this.result.length;
       return;
     }
 

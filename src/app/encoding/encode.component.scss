@@ -27,7 +27,8 @@
     }
 
     md-input {
-      width: 100%;
+      //width: 100%;
+      margin-left: 100px;
     }
 
     form {
@@ -44,6 +45,12 @@
 
     md-textarea {
       width: 100%;
+    }
+
+    .radio-container {
+      md-radio-button {
+        margin: 4px;
+      }
     }
   }
 }
