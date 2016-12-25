@@ -19,6 +19,7 @@ import {MaterialModule} from '@angular/material';
 import {EncodingComponent} from './encoding/encode.component';
 import {BelbinComponent} from './belbin/belbin.component';
 import {BelbinResultComponent} from "./belbin/belbin-result.component";
+import {CryptoComponent} from "./crypto/crypto.component";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -40,6 +41,7 @@ type StoreType = {
   declarations: [
     AppComponent,
     EncodingComponent,
+    CryptoComponent,
     BelbinComponent,
     BelbinResultComponent,
     NoContentComponent

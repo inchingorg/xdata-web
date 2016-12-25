@@ -5,18 +5,22 @@ const encoder = xdata.encoder;
 const decoder = xdata.decoder;
 const base64 = xdata.base64;
 
+var crypto = require('crypto-js');
+
 @Component({
   selector: 'xd-encode',
-  templateUrl: './encode.component.html',
-  styleUrls: ['./encode.component.scss']
+  templateUrl: './crypto.component.html',
+  styleUrls: ['./crypto.component.scss']
 })
-export class EncodingComponent {
+export class CryptoComponent {
   data: string;
   encoding: string = 'utf-8';
   format: string = 'hex';
   result: string = '';
   isBase64: boolean = false;
   bytesCount: number = 0;
+  key: string = "";
+  padding: string = ""
 
   constructor(public snackBar: MdSnackBar) {
   }
@@ -32,22 +36,11 @@ export class EncodingComponent {
     return true;
   }
 
-  encode() {
-    if (!this.isValid()) {
-      return;
-    }
+  encrypt() {
 
-    if (this.isBase64) {
-      this.result = base64.encode(this.data, this.encoding);
-      return;
-    }
-
-    let buffer = encoder.encode(this.data, this.encoding);
-    this.bytesCount = Buffer.byteLength(buffer, 'hex');
-    this.result = encoder.format(buffer, this.format);
   }
 
-  decode() {
+  decrypt() {
     if (!this.isValid()) {
       return;
     }

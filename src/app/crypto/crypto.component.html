@@ -1,43 +1,75 @@
-<md-card class="encode-md-card">
+<md-card class="crpto-md-card">
   <md-toolbar color="primary">
-    <section>
-      <button md-raised-button color="accent" (click)="encode()">Encode</button>
-      <button md-raised-button color="accent" (click)="decode()">Decode</button>
-    </section>
+    <md-radio-group name="function" [(ngModel)]="function">
+      <md-radio-button name="function" value="DES">
+        DES
+      </md-radio-button>
+      <md-radio-button name="function" value="3DES">
+        3DES
+      </md-radio-button>
+      <md-radio-button name="function" value="ASE">
+        ASE
+      </md-radio-button>
+    </md-radio-group>
+
     <span class="fill-remaining"></span>
-      <md-icon class="md-24">live_help</md-icon>
+
+    <section>
+      <button md-raised-button color="accent" (click)="encrypt()">Encrypt</button>
+      <button md-raised-button color="accent" (click)="decrypt()">Decrypt</button>
+    </section>
   </md-toolbar>
   <md-card-content>
-    <table cellspacing="0" style="width: 100%">
-      <tr>
-        <td>
-          <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
-        </td>
-        <td>
-          <md-input dividerColor="primary" placeholder="UTF-8/GBK/..."
-                    [(ngModel)]="encoding">
-          </md-input>
-        </td>
-        <td [style.visibility]="isBase64? 'hidden':'visible'">
-          <md-input dividerColor="accent" placeholder="hex|compressed|map"
-                    [(ngModel)]="format"></md-input>
-        </td>
+    <h3>Data Source</h3>
 
-      </tr>
-    </table>
+    <div md-line class="tool-container">
+      <label>Key:
+        <md-input dividerColor="primary" placeholder="HEX string" [(ngModel)]="key"></md-input>
+      </label>
+      <label>Padding:
+        <md-input dividerColor="primary" [(ngModel)]="padding"></md-input>
+      </label>
+
+      <span class="fill-remaining"></span>
+
+      <label>Encoding (HEX/UTF-8/GBK/...):
+        <md-input dividerColor="primary" [(ngModel)]="encoding">
+        </md-input>
+      </label>
+
+      <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
+
+    </div>
 
     <md-textarea
       rows="4"
-      placeholder="Data Source"
       [(ngModel)]="data"
       #dataSource>
       <md-hint align="end">{{dataSource.characterCount}} Characters</md-hint>
     </md-textarea>
 
+    <h3 md-subheader>Result</h3>
+
+    <section class="radio-container" [style.visibility]="isBase64? 'hidden':'visible'">
+      <md-radio-group name="more_options" [(ngModel)]="format" (change)="encrypt()">
+        <md-radio-button name="more_options" value="plain">
+          Plain Text
+        </md-radio-button>
+        <md-radio-button name="more_options" value="hex">
+          HEX
+        </md-radio-button>
+        <md-radio-button name="more_options" value="compressed">
+          Compressed Hex
+        </md-radio-button>
+        <md-radio-button name="more_options" value="map">
+          HEX Map
+        </md-radio-button>
+      </md-radio-group>
+    </section>
+
     <md-textarea
       readonly
       rows="4"
-      placeholder="Result"
       [(ngModel)]="result">
       <md-hint align="end">{{bytesCount}} {{isBase64? 'Characters': 'Bytes'}}</md-hint>
     </md-textarea>

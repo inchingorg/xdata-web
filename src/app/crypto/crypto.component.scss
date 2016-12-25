@@ -1,49 +1,41 @@
-
-.encode-md-card {
+.crpto-md-card {
   width: 100%;
   margin-bottom: 100px;
   padding: 0;
   //background-color: brown;
-  md-toolbar {
-    span.fill-remaining {
-      flex: 1 1 auto;
-    }
+
+  span.fill-remaining {
+    flex: 1 1 auto;
+  }
+
+  div.tool-container {
+    display: flex;
+    flex-flow: row wrap;
   }
 
   md-card-content {
     padding: 16px;
 
-    md-grid-tile {
-      //background-color: bisque;
-    }
-
     md-textarea {
       width: 100%;
-      //background-color: brown;
     }
 
-    h4 {
-      //background-color: aqua;
+    select {
+      width: 100px;
+      margin-left: 30px;
     }
 
-    md-input {
-      width: 100%;
-    }
-
-    form {
-      table {
-        width: 100%;
-
-        td {
-          md-input {
-            width: 100%;
-          }
-        }
+    label {
+      margin-left: 30px;
+      md-input: {
+        margin-left: 10px;
       }
     }
 
-    md-textarea {
-      width: 100%;
+    .radio-container {
+      md-radio-button {
+        margin: 4px;
+      }
     }
   }
 }
