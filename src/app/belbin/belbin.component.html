@@ -1,13 +1,15 @@
 <div class="belbin">
+  <p>
+    对下列问题的回答，可能在不同程度上描绘了您的行为。每题有八句话，请将十分分配给这八个句子。分配的原则是：最体现您行为的句子分最高，以此类推。最极端的情况也可能是十分全部分配给其中的某一句话。请根据您的实际情况把分数填入后面的表中。</p>
   <md-list *ngFor="let choice of questions">
     <h3>{{choice.number}}. <span>{{choice.question}}</span></h3>
     <md-list-item *ngFor="let option of choice.options">
       <p md-line>
         <span class="secondary-text">{{option.number}}. </span>
         <span>{{option.answer}}</span>
-        <md-input placeholder="0-10" type="number" min="0" max="10" maxlength="4" align="end"
-                  [(ngModel)]="option.score"></md-input>
       </p>
+      <md-slider min="0" max="10" thumbLabel #slider2 [(ngModel)]="option.score"></md-slider>
+      {{slider2.value}}
     </md-list-item>
     <md-divider></md-divider>
   </md-list>

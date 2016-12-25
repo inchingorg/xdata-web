@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ChoiceQuestion, Option} from "./choice-question";
-import {Router} from "@angular/router";
+import {Router, ActivatedRoute} from "@angular/router";
 
 
 @Component({
@@ -9,13 +9,22 @@ import {Router} from "@angular/router";
   styleUrls: ['./belbin.component.scss']
 })
 export class BelbinComponent {
-  scoreOptions = Array.from(Array(10).keys());
+
 
   constructor(private router: Router) {
   }
 
-  onSubmit(){
-    this.router.navigate(['/belbin-result']);
+  onSubmit() {
+    let scores: number[] = new Array(this.questions.length).fill(0);
+
+    for (let i = 0; i < this.questions.length; i++) {
+      let question = this.questions[i];
+      for (let option of question.options) {
+        scores[i] += option.score;
+      }
+    }
+
+    this.router.navigate(['/belbin-result', {scores: JSON.stringify(scores)}]);
   }
 
 

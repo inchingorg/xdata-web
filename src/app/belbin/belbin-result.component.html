@@ -1,7 +1,9 @@
 <div class="card-container">
   <md-card *ngFor="let role of roles">
-    <md-card-subtitle>主要个性</md-card-subtitle>
-    <md-card-title>{{role.name}}</md-card-title>
+    <md-card-title>
+      <button md-mini-fab class="md-accent">{{role.score}}</button>
+      {{role.name}}
+    </md-card-title>
     <md-card-content>
       <md-list>
         <md-list-item>
