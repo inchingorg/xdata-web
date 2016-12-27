@@ -2,7 +2,6 @@
   width: 100%;
   margin-bottom: 100px;
   padding: 0;
-  //background-color: brown;
 
   span.fill-remaining {
     flex: 1 1 auto;
@@ -29,6 +28,13 @@
       margin-left: 30px;
       md-input: {
         margin-left: 10px;
+      }
+
+      &.key {
+        margin-left: 0;
+        md-input {
+          width: 200px;
+        }
       }
     }
 

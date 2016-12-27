@@ -4,11 +4,11 @@
       <md-radio-button name="function" value="DES">
         DES
       </md-radio-button>
-      <md-radio-button name="function" value="3DES">
+      <md-radio-button name="function" value="TripleDES">
         3DES
       </md-radio-button>
-      <md-radio-button name="function" value="ASE">
-        ASE
+      <md-radio-button name="function" value="AES">
+        AES
       </md-radio-button>
     </md-radio-group>
 
@@ -20,26 +20,42 @@
     </section>
   </md-toolbar>
   <md-card-content>
-    <h3>Data Source</h3>
 
     <div md-line class="tool-container">
-      <label>Key:
-        <md-input dividerColor="primary" placeholder="HEX string" [(ngModel)]="key"></md-input>
+      <label class="key">Key:
+        <md-input class="key" dividerColor="primary" placeholder="HEX string" [(ngModel)]="key"></md-input>
       </label>
-      <label>Padding:
-        <md-input dividerColor="primary" [(ngModel)]="padding"></md-input>
-      </label>
-
-      <span class="fill-remaining"></span>
-
       <label>Encoding (HEX/UTF-8/GBK/...):
         <md-input dividerColor="primary" [(ngModel)]="encoding">
         </md-input>
       </label>
 
       <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
-
     </div>
+
+    <div md-line>
+      <section class="radio-container">
+        Padding：
+        <md-radio-group name="paddings" [(ngModel)]="padding">
+          <md-radio-button name="paddings" *ngFor="let pad of paddings" [value]="pad">
+            {{pad}}
+          </md-radio-button>
+        </md-radio-group>
+      </section>
+    </div>
+
+    <div md-line>
+      <section class="radio-container">
+        Mode：
+        <md-radio-group name="modes" [(ngModel)]="mode">
+          <md-radio-button name="modes" *ngFor="let mode1 of modes" [value]="mode1">
+            {{mode1}}
+          </md-radio-button>
+        </md-radio-group>
+      </section>
+    </div>
+
+    <h3>Data Source</h3>
 
     <md-textarea
       rows="4"
