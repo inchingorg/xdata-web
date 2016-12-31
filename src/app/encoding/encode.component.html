@@ -10,28 +10,32 @@
   <md-card-content>
     <h3>Data Source</h3>
     <p md-line>
-      <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
       <md-input dividerColor="primary" placeholder="UTF-8/GBK/..."
                 [(ngModel)]="encoding">
       </md-input>
+      <md-checkbox style="margin-left: 30px" [(ngModel)]="isBase64" [class.hidden]="!isBase64">Base64</md-checkbox>
     </p>
 
     <md-textarea
       rows="4"
       [(ngModel)]="data"
+      (ngModelChange)="onDataSourceChange()"
       #dataSource>
       <md-hint align="end">{{dataSource.characterCount}} Characters</md-hint>
     </md-textarea>
 
     <h3 md-subheader>Result</h3>
 
-    <section class="radio-container" [style.visibility]="isBase64? 'hidden':'visible'">
+    <section class="radio-container" [class.hidden]="isBase64">
       <md-radio-group name="more_options" [(ngModel)]="format" (change)="encode()">
         <md-radio-button name="more_options" value="hex">
           HEX
         </md-radio-button>
         <md-radio-button name="more_options" value="compressed">
           Compressed Hex
+        </md-radio-button>
+        <md-radio-button name="more_options" value="base64">
+          Base64
         </md-radio-button>
         <md-radio-button name="more_options" value="map">
           HEX Map

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {MdSnackBarConfig, MdSnackBar} from "@angular/material";
+import DataUtil from "../util/DataUtil";
 const xdata = require('@inchingorg/xdata');
 const encoder = xdata.encoder;
 const decoder = xdata.decoder;
@@ -30,6 +31,11 @@ export class EncodingComponent {
     }
 
     return true;
+  }
+
+  onDataSourceChange() {
+    this.isBase64 = DataUtil.isBase64String(decoder.format(this.data));
+    this.result = '';
   }
 
   encode() {

@@ -12,6 +12,10 @@
     flex-flow: row wrap;
   }
 
+  .flow {
+    line-height: 48px;
+  }
+
   md-card-content {
     padding: 16px;
 
@@ -24,13 +28,13 @@
       margin-left: 30px;
     }
 
-    label {
+    label, [md-line] section {
       margin-left: 30px;
       md-input: {
         margin-left: 10px;
       }
 
-      &.key {
+      &:first-child {
         margin-left: 0;
         md-input {
           width: 200px;
@@ -38,9 +42,13 @@
       }
     }
 
-    .radio-container {
-      md-radio-button {
-        margin: 4px;
+    .tool-container {
+      label {
+        flex-grow: 1;
+      }
+
+      label md-input {
+        width: 90%;
       }
     }
   }

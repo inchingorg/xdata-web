@@ -1,6 +1,6 @@
 <md-card class="crpto-md-card">
   <md-toolbar color="primary">
-    <md-radio-group name="function" [(ngModel)]="function">
+    <md-radio-group name="function" [(ngModel)]="function" (change)="onFunctionChange()">
       <md-radio-button name="function" value="DES">
         DES
       </md-radio-button>
@@ -11,7 +11,6 @@
         AES
       </md-radio-button>
     </md-radio-group>
-
     <span class="fill-remaining"></span>
 
     <section>
@@ -20,62 +19,70 @@
     </section>
   </md-toolbar>
   <md-card-content>
-
-    <div md-line class="tool-container">
+    <div class="tool-container">
       <label class="key">Key:
-        <md-input class="key" dividerColor="primary" placeholder="HEX string" [(ngModel)]="key"></md-input>
+        <md-input dividerColor="primary" [placeholder]="keySize + ' bytes hex string'" [(ngModel)]="key"></md-input>
       </label>
+      <label class="iv" [class.hidden]="!isIvNeeded">IV:
+        <md-input dividerColor="primary" [placeholder]="ivSize + ' bytes hex string'" [(ngModel)]="iv"
+                  required></md-input>
+      </label>
+    </div>
+
+    <div class="flow">
+      <label>
+        Padding:
+        <md-select [(ngModel)]="padding" name="padding">
+          <md-option *ngFor="let pad of paddings" [value]="pad">
+            {{pad}}
+          </md-option>
+        </md-select>
+      </label>
+      <label>
+        Mode of Operation:
+        <md-select [(ngModel)]="mode" name="modes" (ngModelChange)="onModeChange()">
+          <md-option *ngFor="let mode1 of modes" [value]="mode1">
+            {{mode1}}
+          </md-option>
+        </md-select>
+      </label>
+    </div>
+
+    <h3>Data Source</h3>
+    <div md-line>
+      <label>
+        <md-checkbox [(ngModel)]="isDataSourceHex">HEX</md-checkbox>
+      </label>
+      <span [class.hidden]="isDataSourceHex" style="margin-left: 50px;">
       <label>Encoding (HEX/UTF-8/GBK/...):
         <md-input dividerColor="primary" [(ngModel)]="encoding">
         </md-input>
       </label>
-
-      <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
+      <label>
+        <md-checkbox [(ngModel)]="isBase64">Base64</md-checkbox>
+      </label>
+        </span>
     </div>
-
-    <div md-line>
-      <section class="radio-container">
-        Padding：
-        <md-radio-group name="paddings" [(ngModel)]="padding">
-          <md-radio-button name="paddings" *ngFor="let pad of paddings" [value]="pad">
-            {{pad}}
-          </md-radio-button>
-        </md-radio-group>
-      </section>
-    </div>
-
-    <div md-line>
-      <section class="radio-container">
-        Mode：
-        <md-radio-group name="modes" [(ngModel)]="mode">
-          <md-radio-button name="modes" *ngFor="let mode1 of modes" [value]="mode1">
-            {{mode1}}
-          </md-radio-button>
-        </md-radio-group>
-      </section>
-    </div>
-
-    <h3>Data Source</h3>
-
     <md-textarea
       rows="4"
       [(ngModel)]="data"
+      (ngModelChange)="onDataSourceChange()"
       #dataSource>
       <md-hint align="end">{{dataSource.characterCount}} Characters</md-hint>
     </md-textarea>
 
     <h3 md-subheader>Result</h3>
 
-    <section class="radio-container" [style.visibility]="isBase64? 'hidden':'visible'">
+    <section class="radio-container" [class.hidden]="isBase64">
       <md-radio-group name="more_options" [(ngModel)]="format" (change)="encrypt()">
-        <md-radio-button name="more_options" value="plain">
-          Plain Text
-        </md-radio-button>
         <md-radio-button name="more_options" value="hex">
           HEX
         </md-radio-button>
         <md-radio-button name="more_options" value="compressed">
           Compressed Hex
+        </md-radio-button>
+        <md-radio-button name="more_options" value="base64">
+          Base64
         </md-radio-button>
         <md-radio-button name="more_options" value="map">
           HEX Map

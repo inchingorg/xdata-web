@@ -8,6 +8,18 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .md-select-trigger{
+    height: 48px;
+  }
+
+  .md-select-value{
+    top: -4px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
   md-sidenav {
     min-width: 15%;
 
