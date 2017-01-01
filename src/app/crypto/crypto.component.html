@@ -39,7 +39,7 @@
         </md-select>
       </label>
       <label>
-        Mode of Operation:
+        <span class="secondary-text">Mode of Operation:</span>
         <md-select [(ngModel)]="mode" name="modes" (ngModelChange)="onModeChange()">
           <md-option *ngFor="let mode1 of modes" [value]="mode1">
             {{mode1}}
@@ -48,7 +48,7 @@
       </label>
     </div>
 
-    <h3>Data Source</h3>
+    <h3 class="secondary-text">Data Source</h3>
     <div md-line>
       <label>
         <md-checkbox [(ngModel)]="isDataSourceHex">HEX</md-checkbox>
@@ -77,7 +77,7 @@
     </md-input>
 
 
-    <h3 md-subheader>Result</h3>
+    <h3 md-subheader class="secondary-text">Result</h3>
 
     <section class="radio-container" [class.hidden]="isBase64">
       <md-radio-group name="more_options" [(ngModel)]="format" (change)="encrypt()">
@@ -96,12 +96,11 @@
       </md-radio-group>
     </section>
 
-    <md-textarea
+    <md-input
       readonly
-      rows="4"
       [(ngModel)]="result">
       <md-hint align="end">{{resultCount}}</md-hint>
-    </md-textarea>
+    </md-input>
 
   </md-card-content>
 </md-card>
