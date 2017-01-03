@@ -1,11 +1,11 @@
 {
   "main": {
-    "js": "/xdata-web/main.d2c034ecb11fc06330d9.bundle.js"
+    "js": "/xdata-web/main.4a77f1a08cfaa661ddc6.bundle.js"
   },
   "vendor": {
-    "js": "/xdata-web/vendor.f34e622e981de703287e.bundle.js"
+    "js": "/xdata-web/vendor.aa24d558b539032ba4f3.bundle.js"
   },
   "polyfills": {
-    "js": "/xdata-web/polyfills.e6be7a6304564af2ebba.bundle.js"
+    "js": "/xdata-web/polyfills.003c25544843353cd07a.bundle.js"
   }
 }
