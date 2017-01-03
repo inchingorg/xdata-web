@@ -9,6 +9,6 @@ export default class DataUtil {
   }
 
   static isBase64String(data) {
-    return /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/.test(data);
+    return /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/g.test(data);
   }
 }
